@@ -1,0 +1,22 @@
+.filters-container {
+  width: 60%;
+  height: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+  border: 1xp solid white;
+}
+
+.categories,
+.sources {
+  width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+  .filters-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+}

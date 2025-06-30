@@ -1,0 +1,27 @@
+.selector-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selector-title {
+  font-size: 1rem;
+  font-style: bold;
+  text-decoration: underline;
+}
+
+.selectors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.btn-selector {
+  padding: 1px 3px;
+}
+
+.btn-selector.selected {
+  background-color: lightskyblue;
+}

@@ -1,0 +1,53 @@
+.header {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 0px;
+  }
+}
+
+.logo {
+  color: white;
+}
+
+.logo-text {
+  text-decoration: none;
+  color: #e0e0e0; /*#4aa3df; */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #e0e0e0;
+  font-size: 1.25rem;
+}
+
+a.active {
+  color: #4aa3df;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo-text {
+    font-size: 0.5rem;
+  }
+
+  .header a {
+    font-size: 1rem;
+  }
+}
