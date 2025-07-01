@@ -17,11 +17,22 @@
 
 - Used : CSS Modules
 
+## App State
+
+- Redux Toolkit
+- Redux Thunk - API fetching
+
+## Docker image
+
+- runs on port 5173
+- Build Image : docker build -t react-app:dev
+- Run Image : docker run -p 5173:3000 react-app:dev
+
 ## Future Planned Changes
 
-- add modal to display news details and add link to page there
-- From 1 API update to 3 API aggregate
-- Clean code to standardise across 3API datas (add props where required)
-- ReDesign (Tailwind, MUI)
+- Feat : Add modal to display news details and add link to page there
+- ReFact : From 1 API update to 3 API aggregate
+- ReFact : Clean code to standardise across 3API datas (add props where required)
+- ReFact : ReDesign (Tailwind, MUI)
 - Implement Typescript
-- add search transition for mobile screen button to searchbox
+- Feat : Add search transition for mobile screen button to searchbox
