@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { fetchPrefferedNews } from "../../services/redux/redux-thunk";
 import { setPreferences } from "../../services/redux/news-slice";
 import PreferenceSelector from "./selector/selector";
 import styles from "./preference-modal.module.css";
@@ -34,7 +33,7 @@ const PreferenceModal = ({ setModal }) => {
       authors: selectedAuthors,
     };
     dispatch(setPreferences(updatedPreferences));
-    dispatch(fetchPrefferedNews(updatedPreferences));
+    // dispatch(fetchPrefferedNews(updatedPreferences));
     setModal(false);
   };
 

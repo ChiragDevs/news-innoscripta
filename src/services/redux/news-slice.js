@@ -52,6 +52,15 @@ const newsSlice = createSlice({
     },
     setPreferences: (state, action) => {
       state.preferences = { ...state.preferences, ...action.payload };
+
+      state.preferedFeed = state.news.filter((news) => {
+        const categoryPref =
+          news.category && news.category === state.preferences.category;
+        const authorPref = state.preferences.authors.includes(news.author);
+        const sourcePref = state.preferences.sources.includes(news.source.name);
+
+        return categoryPref && authorPref && sourcePref;
+      });
     },
   },
   extraReducers: (builder) => {
