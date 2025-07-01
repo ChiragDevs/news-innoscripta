@@ -17,8 +17,8 @@ const PreferenceModal = ({ setModal }) => {
     })
   );
 
-  const [selectedCategories, setSelectedCategories] = useState(
-    preferences?.categories || []
+  const [selectedCategory, setSelectedCategory] = useState(
+    preferences?.category || ""
   );
   const [selectedSources, setSelectedSources] = useState(
     preferences?.sources || []
@@ -29,7 +29,7 @@ const PreferenceModal = ({ setModal }) => {
 
   const handleApply = () => {
     const updatedPreferences = {
-      categories: selectedCategories,
+      category: selectedCategory ? selectedCategory : "general",
       sources: selectedSources,
       authors: selectedAuthors,
     };
@@ -47,8 +47,9 @@ const PreferenceModal = ({ setModal }) => {
           <PreferenceSelector
             title="Categories"
             options={categories}
-            selectedOptions={selectedCategories}
-            setSelectedOptions={setSelectedCategories}
+            selectedOptions={selectedCategory}
+            setSelectedOptions={setSelectedCategory}
+            type="radio"
           />
 
           <PreferenceSelector

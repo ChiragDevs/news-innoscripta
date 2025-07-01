@@ -1,38 +1,104 @@
-## News Article
+# 📰 News Article Aggregator
 
-## Requirements
+A responsive web application that aggregates news articles from multiple sources. The project demonstrates core concepts such as API integration, search, filtering, state management using Redux Toolkit.
 
-- [ ] Use 3 News APIs to aggregate News Data.
-- [x] Article search and filtering: Users should be able to search for articles by keyword and filter the results by date, category, and source.
-- [ ] Personalized news feed: Users should be able to customize their news feed by selecting their preferred sources, categories, and authors.
-- [x] Mobile-responsive design: The website should be optimized for viewing on mobile devices.
+## ✅ Features
 
-## Routing
+- Aggregates news data from multiple APIs (planned: 3 API integration)
+- Search articles by keyword
+- Filter articles by:
 
-- React Router
-- [Declarative Mode](https://reactrouter.com/start/declarative/installation)
-- 2 Pages - News Articles & News Feed
+  - Date
+  - Category
+  - Source
 
-## Styling
+- Personalized news feed based on user preferences (categories, sources, authors)
+- Mobile-responsive design
+- Clean component structure with CSS Modules for styling
 
-- Used : CSS Modules
+## 🛠️ Tech Stack
 
-## App State
+- Frontend : ReactJS (Vite)
+- State Management : Redux Toolkit (Thunk)
+- Styling : CSS Modules
+- Routing : React Router (Declarative Mode)
+- Containerization : Docker
 
-- Redux Toolkit
-- Redux Thunk - API fetching
+## 🚀 Getting Started
 
-## Docker image
+1. Clone the Repository
+   ```bash
+     git clone https://github.com/your-username/news-aggregator.git
+     cd news-aggregator
+   ```
+2. Install Dependencies
+   ```bash
+    npm install
+   ```
+3. Run the Application
+   ```bash
+     npm run dev
+   ```
+4. Application will be accessible at http://localhost:5173
 
-- runs on port 5173
-- Build Image : docker build -t react-app:dev
-- Run Image : docker run -p 5173:3000 react-app:dev
+## 🗺️ Application Routing
 
-## Future Planned Changes
+- Implemented using React Router - Declarative Mode
 
-- Feat : Add modal to display news details and add link to page there
-- ReFact : From 1 API update to 3 API aggregate
-- ReFact : Clean code to standardise across 3API datas (add props where required)
-- ReFact : ReDesign (Tailwind, MUI)
-- Implement Typescript
-- Feat : Add search transition for mobile screen button to searchbox
+- News Articles Page – Displays all available news articles with search and filtering options
+
+- News Feed Page – Displays personalized news feed based on user preferences
+
+## 🎨 Styling
+
+- Component-scoped styles with CSS Modules
+- Planned improvements with Tailwind CSS or Material UI
+
+## 🐳 Docker Instructions
+
+- Build Docker Image :
+
+```bash
+docker build -t react-app:dev .
+```
+
+- Run Docker Container :
+
+```bash
+docker run -p 5173:5173 react-app:dev
+```
+
+- The application will be available at http://localhost:5173
+
+## 🔧 Planned Improvements
+
+- Integrate 3 separate News APIs and aggregate their data
+
+- Modal to display detailed news content with external links
+- Standardize props and structure to handle multi-API data uniformly
+- Implement Tailwind CSS or Material UI for modernized design
+- Migrate project to TypeScript for improved type safety
+- Improve mobile search experience with animated transition for search bar
+
+## 📸 UI
+
+## 📦 Folder Structure (Simplified)
+
+```bash
+src/
+├── components/ # Reusable UI components
+├── pages/ # App Pages
+    ├── articles/
+    ├── feed/
+├── services/ # State and API services
+    ├── redux/ # App Store
+    ├── api/ # API fetching
+├── App.jsx
+├── main.jsx
+```
+
+## ✅ Requirements Status
+
+- Article search and filtering
+- Mobile-responsive design
+- Personalized news feed (in-progress)

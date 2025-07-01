@@ -44,14 +44,14 @@ export const searchNews = createAsyncThunk(
 export const fetchPrefferedNews = createAsyncThunk(
   "news/fetchPrefferedNews",
   async (preferences, thunkAPI) => {
-    const { categories, sources, authors } = preferences;
+    const { category, sources, authors } = preferences;
     try {
-      const data = await getPrefferedNews(categories, sources);
+      const data = await getPrefferedNews(category, sources);
 
       const filteredData = authors?.length
         ? data.filter((n) => authors.includes(n.author))
         : data;
-      return filteredDataData;
+      return filteredData;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.message);
     }

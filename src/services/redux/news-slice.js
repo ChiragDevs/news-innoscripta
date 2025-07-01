@@ -17,7 +17,7 @@ const initialState = {
   error: null,
   preferedFeed: [],
   preferences: {
-    categories: [],
+    category: "",
     sources: [],
     authors: [],
   },
