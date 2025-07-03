@@ -106,7 +106,7 @@ docker run -p 5173:5173 react-app:dev
 
 - Article search and filtering
 - Mobile-responsive design
-- Personalized news feed (in-progress)
+- Personalized news feed
 
 ## 🔧 Planned Improvements
 
